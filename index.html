@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша доска записок</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>💌 Наша доска записок</h1>
+        
+        <form id="noteForm">
+            <textarea id="noteInput" placeholder="Напиши что-нибудь для подруги..." required></textarea>
+            <button type="submit">💌 Отправить записку</button>
+        </form>
+
+        <div class="notes-section">
+            <h2>Все записки:</h2>
+            <div id="notesContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
