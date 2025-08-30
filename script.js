@@ -1,6 +1,11 @@
 // 🔥 Firebase конфигурация (вставь сюда свои данные!)
 const firebaseConfig = {
-    // ТВОЯ КОНФИГУРАЦИЯ
+  apiKey: "AIzaSyBB25BI8gQsUXihsLqiLN8gywYX4yxnFTg",
+  authDomain: "notes-8741e.firebaseapp.com",
+  projectId: "notes-8741e",
+  storageBucket: "notes-8741e.firebasestorage.app",
+  messagingSenderId: "424099145357",
+  appId: "1:424099145357:web:d8b3bbd9540128afbd24c4"
 };
 
 // Инициализация Firebase
