@@ -1,6 +1,11 @@
 // 🔥 Firebase конфигурация (вставь сюда свои данные!)
 const firebaseConfig = {
-    // ТВОЯ КОНФИГУРАЦИЯ
+  apiKey: "AIzaSyBB25BI8gQsUXihsLqiLN8gywYX4yxnFTg",
+  authDomain: "notes-8741e.firebaseapp.com",
+  projectId: "notes-8741e",
+  storageBucket: "notes-8741e.firebasestorage.app",
+  messagingSenderId: "424099145357",
+  appId: "1:424099145357:web:d8b3bbd9540128afbd24c4"
 };
 
 // Инициализация Firebase
@@ -109,3 +114,48 @@ db.collection('notes')
         console.error('Ошибка при загрузке записок:', error);
         notesContainer.innerHTML = '<div class="loading">Ошибка загрузки. Проверьте подключение к интернету.</div>';
     });
+
+
+
+
+    // Добавь в конец файла, после всех других функций
+
+// Управление музыкой
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('background-music');
+    const playButton = document.getElementById('play-button');
+    const muteButton = document.getElementById('mute-button');
+    const unmuteButton = document.getElementById('unmute-button');
+    
+    // Play button
+    playButton.addEventListener('click', function() {
+        audio.play().then(() => {
+            playButton.style.display = 'none';
+            muteButton.style.display = 'block';
+            unmuteButton.style.display = 'none';
+        }).catch(e => {
+            console.log('Ошибка воспроизведения:', e);
+        });
+    });
+    
+    // Mute button (включить звук)
+    muteButton.addEventListener('click', function() {
+        audio.muted = false;
+        muteButton.style.display = 'none';
+        unmuteButton.style.display = 'block';
+    });
+    
+    // Unmute button (выключить звук)
+    unmuteButton.addEventListener('click', function() {
+        audio.muted = true;
+        unmuteButton.style.display = 'none';
+        muteButton.style.display = 'block';
+    });
+    
+    // Автопопытка воспроизведения
+    setTimeout(() => {
+        audio.play().catch(e => {
+            console.log('Автовоспроизведение заблокировано');
+        });
+    }, 1000);
+});

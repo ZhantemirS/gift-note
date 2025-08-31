@@ -3,30 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наша доска записок</title>
+    <title>С днём рождения, Сонь!!!</title>
     <link rel="stylesheet" href="style.css">
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+   
 </head>
 <body>
     <div class="container">
-        <h1>💌 Наша доска записок</h1>
-        <p class="subtitle">Специальный сайт для тебя в твой день рождения! 💖</p>
+        <h1>Это..доска записок, или же наш собственный чат..воть</h1>
+        <p class="subtitle">проста так, или же на случай если телеграмма не будет</p>
         
         <!-- Простая форма -->
         <form id="noteForm">
-            <input type="text" id="userName" placeholder="Твой ник" required>
-            <textarea id="noteInput" placeholder="Напиши что-нибудь для подруги..." required></textarea>
-            <button type="submit">💌 Отправить записку</button>
+            <input type="text" id="userName" placeholder="твой ник :p" required>
+            <textarea id="noteInput" placeholder="Напиши тут что-та" required></textarea>
+            <button type="submit">Отправить штучку</button>
         </form>
 
         <div class="notes-section">
-            <h2>Все записки:</h2>
+            <h2>Все сообщения</h2>
             <div id="notesContainer"></div>
         </div>
     </div>
+<audio id="background-music" src="assets/home.mp3" loop></audio>
+ <!-- Music Control Buttons -->
+ <div id="music-controls">
+  <!-- Play Button -->
+  <div class="music-button" id="play-button">
+    <img src="assets/star.png" alt="Play">
+    <p>Начать музыку</p>
+  </div>
 
+  <!-- Mute Button -->
+  <div class="music-button" id="mute-button">
+    <img src="assets/heart.png" alt="Mute">
+    <p>Выключить (я исправил!! )</p>
+  </div>
+
+  <!-- Unmute Button -->
+  <div class="music-button" id="unmute-button">
+    <img src="assets/heart2.png" alt="Unmute">
+    <p>Включить (пхпхпх)</p>
+  </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
