@@ -8,34 +8,21 @@
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
-    
 </head>
 <body>
-    <input type="hidden" id="userAvatarUrl" value="">
     <div class="container">
         <h1>💌 Наша доска записок</h1>
         <p class="subtitle">Специальный сайт для тебя в твой день рождения! 💖</p>
         
-        <!-- Форма с ником и аватаркой -->
+        <!-- Простая форма -->
         <form id="noteForm">
-            <div class="user-setup">
-                <input type="text" id="userName" placeholder="Твой ник" required>
-                <div class="avatar-upload">
-                    <label for="avatarUpload" class="upload-label">
-                        <span id="uploadText">📷 Загрузи фото профиля</span>
-                        <img id="previewAvatar" class="avatar-preview" style="display: none;">
-                    </label>
-                    <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
-                    <input type="hidden" id="userAvatarUrl" value="">
-                </div>
-            </div>
+            <input type="text" id="userName" placeholder="Твой ник" required>
             <textarea id="noteInput" placeholder="Напиши что-нибудь для подруги..." required></textarea>
-            <button type="submit" id="submitBtn">💌 Отправить записку</button>
+            <button type="submit">💌 Отправить записку</button>
         </form>
 
         <div class="notes-section">
-            <h2>Все записок:</h2>
+            <h2>Все записки:</h2>
             <div id="notesContainer"></div>
         </div>
     </div>
