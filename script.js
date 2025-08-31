@@ -32,7 +32,7 @@ function saveUserSession(username) {
 }
 
 // Показываем загрузку
-notesContainer.innerHTML = '<div class="loading">Загрузка записок... <span class="heart">💕</span></div>';
+notesContainer.innerHTML = '<div class="loading">Загрузка штучек... <span class="heart">💕</span></div>';
 
 // Загружаем сохраненный ник при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
@@ -68,7 +68,7 @@ noteForm.addEventListener('submit', async (e) => {
         
     } catch (error) {
         console.error('Ошибка при добавлении записки:', error);
-        alert('Произошла ошибка. Попробуйте еще раз!');
+        alert('Произошла ошибка. Попробуй  еще раз!');
     }
 });
 
@@ -79,7 +79,7 @@ db.collection('notes')
         notesContainer.innerHTML = '';
         
         if (snapshot.empty) {
-            notesContainer.innerHTML = '<div class="loading">Пока нет записок. Будь первой! 💖</div>';
+            notesContainer.innerHTML = '<div class="loading">Записок нету покаа</div>';
             return;
         }
         
